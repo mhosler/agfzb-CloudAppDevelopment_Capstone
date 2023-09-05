@@ -11,17 +11,13 @@ urlpatterns = [
     # path for contact us view
     path('contact/', views.contact, name='contact'),
 
-    # path for registration
-    # Uncomment below when you've defined registration_request view
-    # path('register/', views.registration_request, name='register'),
-
     # path for login
-    # Uncomment below when you've defined login_request view
-    # path('login/', views.login_request, name='login'),
+    path('login/', views.login_request, name='login_request'),
 
     # path for logout
-    # Uncomment below when you've defined logout_request view
-    # path('logout/', views.logout_request, name='logout'),
+    path('logout/', views.logout_request, name='logout_request'),
+    # path for registration
+    path('signup/', views.registration_request, name='registration_request'),
 
     path(route='', view=views.get_dealerships, name='index'),
 
